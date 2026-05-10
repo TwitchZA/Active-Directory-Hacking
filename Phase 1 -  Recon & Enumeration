@@ -1,0 +1,19 @@
+#  🔍 PHASE 1: RECON & ENUMERATION
+##  🧪 Check if Accounts Exist (No Kerberos)
+
+nxc ldap <IP> -u users.txt -p '' -k
+
+Purpose: Identify valid usernames
+MITRE: T1071 – LDAP Recon
+
+## 👥 Enumerate Users
+
+nxc ldap <IP> -u user -p pass --users
+nxc ldap <IP> -u user -p pass --active-users
+
+MITRE: T1087 – Account Discovery
+
+## 🔎 LDAP Queries
+
+nxc ldap <IP> -u user -p pass --query "(sAMAccountName=target)" ""
+
