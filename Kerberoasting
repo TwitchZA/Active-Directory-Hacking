@@ -1,0 +1,66 @@
+# 🔥 Kerberoasting – Service Account Analysis
+
+## 📌 Overview
+Kerberoasting targets service accounts with Service Principal Names (SPNs).
+
+---
+
+## 🎯 Objective
+Identify weak service account configurations.
+
+---
+
+## 🧭 Workflow (High-Level)
+
+1. Identify accounts with SPNs
+2. Request service tickets (authorized lab)
+3. Extract ticket data
+4. Analyze password strength
+
+---
+
+## 🔍 What to Look For
+
+### 🔑 Target Accounts
+- Service accounts
+- Accounts with SPNs
+- Legacy systems
+
+---
+
+### ⚠️ Weakness Indicators
+- Weak password policies
+- No password rotation
+- High privilege service accounts
+
+---
+
+## 📊 Evidence Indicators
+
+- Kerberos ticket requests
+- Unusual authentication patterns
+- Large volume of ticket activity
+
+---
+
+## 🛡️ Detection
+
+- Monitor Kerberos logs
+- Detect abnormal ticket requests
+- Alert on service account abuse
+
+---
+
+## 🔐 Prevention
+
+- Strong passwords (20+ chars)
+- Managed service accounts
+- Regular rotation
+
+---
+
+## 🧠 DPCI Notes
+
+- Correlate logs with user activity
+- Document accounts targeted
+- Include MITRE mapping in report
