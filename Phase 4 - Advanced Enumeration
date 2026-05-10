@@ -19,3 +19,9 @@ nxc ldap <IP> -u user -p pass -M get-network
 ## 📜 DACL Analysis
 
 nxc ldap <IP> -u user -p pass -M daclread -o TARGET=Administrator ACTION=read
+
+## ADCS Exploitation
+
+nxc ldap <IP> -u user -p pass -M adcs
+
+
