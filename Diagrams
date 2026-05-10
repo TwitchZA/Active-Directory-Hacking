@@ -1,0 +1,12 @@
+# Attack Flow
+
+```mermaid
+graph TD
+A[Prep]-->B[Enumeration]
+B-->C[Credential Access]
+C-->D[Privilege Analysis]
+D-->E[Path Discovery]
+E-->F[Exploitation (Authorized/Lab)]
+F-->G[Lateral Movement (Authorized/Lab)]
+G-->H[Reporting]
+```
