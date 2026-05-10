@@ -39,6 +39,16 @@ Designed for:
 
 ---
 
+## 🔄 Attack vs Defence Mapping
+
+| Attack | Detection | Prevention |
+|-------|--------|-----------|
+| LLMNR Poisoning | Multicast traffic spikes | Disable LLMNR |
+| ASREPRoast | Kerberos anomalies | Enforce pre-auth |
+| Kerberoast | SPN requests | Strong passwords |
+| Credential Dumping | LSASS access | Credential Guard |
+| BloodHound | LDAP spikes | Query monitoring |
+
 ## ⚠️ Legal Disclaimer
 All techniques in this repository must be used **ONLY in authorised environments**.
 
