@@ -1,0 +1,17 @@
+# 🧠 PHASE 3: PRIVILEGE ENUMERATION
+
+## 🆔 Domain SID
+
+nxc ldap <IP> -u user -p pass --get-sid
+
+## 👑 Admin Accounts
+
+nxc ldap <IP> -u user -p pass --admin-count
+
+## 👥 Group Membership
+
+nxc ldap <IP> -u user -p pass -M groupmembership -o USER="target"
+
+## 👨‍👩‍👧 Group Members
+
+nxc ldap <IP> -u user -p pass -M group-mem -o GROUP="Domain admins"
