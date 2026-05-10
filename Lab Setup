@@ -1,0 +1,21 @@
+# Active Directory Lab Setup
+
+## Requirements
+- Windows Server 2019 (Domain Controller)
+- Windows 10 Client
+- Kali Linux (Attacker)
+
+## Network
+- Domain: ignite.local
+- DC: 192.168.1.48
+- Kali: 192.168.1.100
+
+## Tools Installation (Kali)
+
+sudo apt update
+sudo apt install netexec bloodhound neo4j
+
+## Start BloodHound
+
+sudo neo4j console
+bloodhound
