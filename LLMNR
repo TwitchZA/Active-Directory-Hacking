@@ -1,0 +1,62 @@
+# 🌐 LLMNR / Responder-Based Credential Capture
+
+## 📌 Overview
+LLMNR poisoning exploits fallback name resolution to capture authentication attempts.
+
+---
+
+## 🎯 Objective
+Capture NTLM authentication attempts in a controlled environment.
+
+---
+
+## 🧭 Workflow (High-Level)
+
+1. Monitor network traffic
+2. Identify broadcast name resolution requests
+3. Observe authentication attempts
+4. Capture credential artifacts (lab only)
+
+---
+
+## 🔍 What to Look For
+
+### 📡 Network Indicators
+- LLMNR broadcasts
+- NetBIOS name queries
+
+---
+
+### 🔐 Credential Artifacts
+- NTLMv2 challenge-response
+- Username + domain
+
+---
+
+### ⚠️ Risk Indicators
+- Users accessing unknown shares
+- Repeated failed lookups
+
+---
+
+## 🛡️ Detection
+
+- Monitor multicast traffic
+- SIEM alerts for abnormal authentication
+- IDS/IPS signatures
+
+---
+
+## 🔐 Prevention
+
+- Disable LLMNR
+- Disable NetBIOS
+- Enforce SMB signing
+
+---
+
+## 🧠 DPCI Notes
+
+- Treat captured hashes as sensitive evidence
+- Record timestamps + source machine
+- Preserve logs for court use
