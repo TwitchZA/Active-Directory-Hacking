@@ -17,3 +17,36 @@ MITRE: T1087 – Account Discovery
 
 nxc ldap <IP> -u user -p pass --query "(sAMAccountName=target)" ""
 
+# ⚠️ LLMNR Poisoning (Responder Attack)
+
+## ⚔️ Attack Methodology
+
+### Step 1: Start Responder
+
+sudo responder -I eth0
+
+### Step 2: Wait for Victim Traffic
+Victim attempts to access unknown host
+LLMNR request is broadcast
+Attacker responds
+
+### Step 3: Capture Hashes
+
+Responder captures:
+
+NTLMv2 hashes
+Username
+Domain
+
+### Step 4: Crack Hashes
+
+hashcat -m 5600 hashes.txt rockyou.txt
+
+
+
+
+
+
+
+
+
