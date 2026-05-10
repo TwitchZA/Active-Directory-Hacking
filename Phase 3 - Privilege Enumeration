@@ -12,6 +12,6 @@ nxc ldap <IP> -u user -p pass --admin-count
 
 nxc ldap <IP> -u user -p pass -M groupmembership -o USER="target"
 
-## 👨‍👩‍👧 Group Members
+## 👨‍👩‍👧 Domain Members
 
 nxc ldap <IP> -u user -p pass -M group-mem -o GROUP="Domain admins"
