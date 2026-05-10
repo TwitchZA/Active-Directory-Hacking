@@ -1,0 +1,68 @@
+# 🧠 BloodHound Analysis – Active Directory Attack Path Mapping
+
+## 📌 Overview
+BloodHound is used to map relationships in Active Directory to identify:
+- Privilege escalation paths
+- Misconfigured permissions
+- Attack paths to Domain Admin
+
+---
+
+## 🎯 Objective
+Identify the **shortest path to high privilege accounts**
+
+---
+
+## 🧭 Workflow (High-Level)
+
+1. Collect directory data (authorized lab/tooling)
+2. Import into BloodHound
+3. Analyze relationships
+4. Identify attack paths
+
+---
+
+## 🔍 What to Look For
+
+### 🔑 High Value Targets
+- Domain Admins
+- Enterprise Admins
+- Service Accounts
+
+---
+
+### 🔗 Dangerous Relationships
+- “User → AdminTo → Computer”
+- “User → MemberOf → Privileged Group”
+- “GenericAll / GenericWrite permissions”
+
+---
+
+### ⚠️ Common Weaknesses
+- Over-permissioned accounts
+- Stale admin privileges
+- Nested group abuse
+
+---
+
+## 📊 Key Queries (Conceptual)
+
+- Shortest path to Domain Admin
+- Users with admin rights on multiple systems
+- Kerberoastable accounts
+
+---
+
+## 🛡️ Defensive Insight
+
+- Monitor excessive LDAP queries
+- Detect large-scale enumeration
+- Audit privileged group membership
+
+---
+
+## 🧠 DPCI Notes
+
+- Export graphs as evidence
+- Document relationships clearly
+- Use visuals in reports
