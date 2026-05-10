@@ -12,3 +12,6 @@ nxc ldap <IP> -u user -p pass -M pre2k
 
 nxc ldap <IP> -u user -p pass -M adcs
 
+## Pass the Hash
+
+nxc ldap <IP> -u user -H <hash>
