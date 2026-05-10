@@ -1,0 +1,9 @@
+# 📊 MITRE ATT&CK MAPPING
+
+| Technique | Description                |
+| --------- | -------------------------- |
+| T1087     | Account Discovery          |
+| T1110     | Brute Force                |
+| T1558.001 | Kerberos Ticket Extraction |
+| T1003     | Credential Dumping         |
+| T1071     | LDAP Recon                 |
