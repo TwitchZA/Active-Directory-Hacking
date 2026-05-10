@@ -11,3 +11,15 @@ nxc ldap <IP> -u user -p pass -M get-unixUserPassword
 ## ⚙️ Password Policies (PSO)
 
 nxc ldap <IP> -u admin -p pass -M pso
+
+## Bloodhound Collection
+
+nxc ldap <IP> -u user -p pass --bloodhound --collection All
+
+neo4j console
+bloodhound
+
+Identify:
+Shortest path to Domain Admin
+Misconfigured ACLs
+Privileged sessions
