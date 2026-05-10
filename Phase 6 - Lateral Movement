@@ -1,0 +1,14 @@
+# 🔗 PHASE 6: LATERAL MOVEMENT
+
+## 🔗 Trust Relationships
+
+nxc ldap <IP> -u user -p pass -M enum_trusts
+
+## 🖥️ Pre-Created Accounts
+
+nxc ldap <IP> -u user -p pass -M pre2k
+
+## 🎫 ADCS Enumeration
+
+nxc ldap <IP> -u user -p pass -M adcs
+
