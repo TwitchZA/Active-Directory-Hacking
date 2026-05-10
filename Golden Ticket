@@ -1,0 +1,57 @@
+# 👑 Golden Ticket – Kerberos Trust Abuse
+
+## 📌 Overview
+Golden Ticket attacks involve forging Kerberos tickets to impersonate users.
+
+---
+
+## 🎯 Objective
+Understand impact of compromised Kerberos trust.
+
+---
+
+## 🧭 Workflow (Conceptual)
+
+1. Compromise domain trust material
+2. Generate forged authentication ticket (lab only)
+3. Access resources as privileged user
+
+---
+
+## 🔍 What to Look For
+
+### ⚠️ Indicators
+- Long-lived Kerberos tickets
+- Authentication without password usage
+- Access to multiple systems rapidly
+
+---
+
+### 📊 Logs
+- Event ID anomalies
+- Unusual ticket lifetimes
+- Repeated privileged access
+
+---
+
+## 🛡️ Detection
+
+- Monitor Kerberos ticket anomalies
+- Detect abnormal TGT usage
+- SIEM correlation
+
+---
+
+## 🔐 Prevention
+
+- Secure domain controllers
+- Rotate KRBTGT account regularly
+- Monitor privileged access
+
+---
+
+## 🧠 DPCI Notes
+
+- Extremely high impact attack
+- Treat as full domain compromise
+- Immediate incident response required
